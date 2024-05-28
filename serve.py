@@ -5,6 +5,8 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from sentence_transformers import CrossEncoder
 
+from src.chunk_splitting import split_chunk
+
 app = FastAPI()
 
 MODEL_ID = "cross-encoder/ms-marco-MiniLM-L-12-v2"
@@ -31,10 +33,20 @@ def re_rank(inputs: QuestionRanker):
     question = inputs.question
     total_chunks = inputs.total_chunks
     question_chunks_pairs = [(str(question), str(total_chunks[index])) for index in range(len(total_chunks))]
-    print(question_chunks_pairs[0])
-    scores = list(model_cross_encoder.predict(question_chunks_pairs))
-    scores = [float(score) for score in scores]
-    payload = [{"pair": question_chunks_pairs[index], "score": scores[index]} for index in range(len(question_chunks_pairs))]
+    list_scores = []
+    for chunk in total_chunks:
+        print(chunk)
+        list_split_chunk = split_chunk(chunk)
+        question_pair_chunk = [(str(question), str(list_split_chunk[index])) for index in range(len(list_split_chunk))]
+        print(question_pair_chunk)
+        scores = list(model_cross_encoder.predict(question_pair_chunk))
+        scores = [float(score) for score in scores]
+        print(scores)
+        final_score = max(scores)
+        print(final_score)
+        print("==============================")
+        list_scores.append(final_score)
+    payload = [{"pair": question_chunks_pairs[index], "score": list_scores[index]} for index in range(len(question_chunks_pairs))]
     return payload
 
 if __name__ == "__main__":
