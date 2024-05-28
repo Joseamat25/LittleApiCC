@@ -12,6 +12,11 @@ data_es = {
                      """5. HORAS DE EXCESO DE JORNADA\n\nLas horas generadas por el exceso de jornada anual podrán ser solicitadas en descanso hasta el siguiente máximo:\n\n24 horas para el turno de mañana y tarde\n\n32 horas para el turno de noche\n\nEl resto de las horas, en el caso de que se generasen más de 24 o 32 horas al año respectivamente, serán calendarizadas por la empresa. Estas horas podrán ser disfrutadas como jornadas completas diarias o bien por el 50% de la jornada diaria de cada persona.\n\nLos plazos para solicitar las horas generadas por exceso de jornada son los siguientes:\n\nLas solicitudes de horas de exceso de jornada se deberán realizar con una antelación máxima de 20 días naturales.\n\nPara las solicitudes de días de exceso de jornada a disfrutar entre el 1 de enero y el 30 de septiembre, el plazo máximo de solicitud de las horas generadas por exceso de jornada será el 25 de septiembre del año en curso.\n\nLas solicitudes para disfrutar de días de exceso de jornada en el periodo comprendido entre el 1 de octubre y el 31 de diciembre deberá realizarse entre el 10 y el 25 de septiembre.\n\nEn el caso de que, transcurridos los plazos anteriores, queden pendiente de disfrutar horas por exceso de jornada, estas horas serán calendarizadas por la empresa, siempre en el año en curso.\n\nLa concesión de las solicitudes de exceso de jornada se realizará teniendo en cuenta el porcentaje máximo de ausencias y serán concedidas atendiendo al cupo disponible."""]
 }
 
+data = {
+    "question": "This is an example test?",
+    "total_chunks": ["Example chunk for dealing this case", "This is another case", "Yes, of course, this is an example test"]
+}
+
 data_en = {
     "question": "How many vacation days do I have?",
     "total_chunks": ["""4. OWN BUSINESS DAY\n\nA personal business day is established and is considered effective work time. The enjoyment of this day must not coincide with the beginning or end of vacation, nor be the day before or after a work holiday, nor be the day before Sunday. It can be enjoyed on Monday. The request for this permit must be made 24 hours in advance. It can be enjoyed in two half days. The request must be made through the APP.""",
