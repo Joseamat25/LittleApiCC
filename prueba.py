@@ -32,11 +32,11 @@ data_en_notario = {
 Urgent family reasons, four days a year, can be enjoyed for hours up to the total number of hours 
 of each day for 4 days. Proof of force majeure or family reason is required. 
 urgent care of family members and cohabitants, in case of illness or accident, which requires presence 
-immediate. ""","""
+immediate. """+"""
 Unpaid parental leave 8 weeks a year: 
 Parental leave, 8 weeks until the minor is 8 years old, will be justified unpaid, 
 does not require justification, must be notified 10 days in advance, and can be enjoyed for 
-full or discontinuous weeks. The granting of this request will be made taking into account…""",
+full or discontinuous weeks. The granting of this request will be made taking into account…"""+
 """Notary or appointment at the town hall:
 Paid permits are not contemplated for attending appointments at the town hall, notary office or 
 Similar. Therefore, if you need to go to an appointment at the notary or town hall, you will have to 
